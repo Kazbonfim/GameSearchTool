@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A Simple Game Search Tool v0.1</title>
+    <!-- Link para o CSS do Bootstrap -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        padding: 20px; /* Espaçamento ao redor do corpo */
+        font-family: Arial, sans-serif; /* Fonte para melhorar a legibilidade */
+        background-color: #f8f9fa; /* Cor de fundo leve */
+      }
+      #suggestions {
+        margin-top: 10px; /* Espaço acima das sugestões */
+        position: absolute; /* Para posicionar corretamente as sugestões */
+        width: 100%;
+        max-height: 200px;
+        z-index: 1000;
+        overflow-y: auto;
+      }
+      .suggestion-item {
+        border-bottom: 1px solid #ccc; /* Borda para separar as sugestões */
+        background-color: white; /* Fundo branco */
+        transition: background-color 0.5s; /* Transição suave para a cor de fundo */
+      }
+      .suggestion-item:hover {
+        background-color: #d9dee4; /* Destaque ao passar o mouse */
+        cursor: pointer; /* Adiciona um cursor pointer */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container text-center" style="position: relative">
+      <h1 class="my-4">A Simple Game Search Tool</h1>
+      <input
+        id="gameQuery"
+        type="text"
+        class="form-control"
+        placeholder="Input your search here"
+      />
+      <div id="suggestions">
+        <!-- Campo de sugestões de escrita aqui -->
+      </div>
+    </div>
+
+    <script src="/javascripts/suggestion.js"></script>
+    <!-- Script do Bootstrap (opcional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
